@@ -1,5 +1,8 @@
 package com.xxf.easy;
 
+import java.math.BigInteger;
+import java.util.Stack;
+
 /**
  * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
  * <p>
@@ -39,6 +42,35 @@ class AddTwoNums {
             cur.next = new ListNode(carry);
         }
         return dummy.next;
+    }
+
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        BigInteger num1 = trans2Num(l1);
+        BigInteger num2 = trans2Num(l2);
+        BigInteger result = num1.add(num2);
+        String resultStr = result.toString();
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
+        char[] chars = resultStr.toCharArray();
+        for (int i = chars.length - 1; i >= 0; i--) {
+            cur.next = new ListNode(Integer.parseInt(chars[i] + ""));
+            cur = cur.next;
+        }
+        return head.next;
+    }
+
+    private static BigInteger trans2Num(ListNode l) {
+        Stack<Integer> stack = new Stack<>();
+        ListNode tmp = l;
+        while (tmp != null) {
+            stack.push(tmp.val);
+            tmp = tmp.next;
+        }
+        StringBuilder sb = new StringBuilder();
+        while (!stack.empty()) {
+            sb.append(stack.pop());
+        }
+        return new BigInteger(sb.toString());
     }
 }
 
