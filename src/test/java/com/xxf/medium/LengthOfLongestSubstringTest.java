@@ -1,4 +1,4 @@
-package com.xxf.easy;
+package com.xxf.medium;
 
 import org.junit.Assert;
 import org.junit.Test;

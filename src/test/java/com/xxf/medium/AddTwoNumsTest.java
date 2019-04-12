@@ -1,5 +1,7 @@
-package com.xxf.easy;
+package com.xxf.medium;
 
+import com.xxf.ListNode;
+import com.xxf.medium.AddTwoNums;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,22 +28,12 @@ public class AddTwoNumsTest {
     @Test
     public void addTwoNumbers() {
         ListNode result = addTwoNums.addTwoNumbers(l1, l2);
-        StringBuilder sb = new StringBuilder();
-        while (result != null) {
-            sb.append(result.val);
-            result = result.next;
-        }
-        assertEquals(807, Integer.parseInt(sb.reverse().toString()));
+        assertEquals(807, Integer.parseInt(result.toReverseString()));
     }
 
     @Test
     public void addTwoNumbers2() {
         ListNode result = addTwoNums.addTwoNumbers2(l1, l2);
-        StringBuilder sb = new StringBuilder();
-        while (result != null) {
-            sb.append(result.val);
-            result = result.next;
-        }
-        assertEquals(807, Integer.parseInt(sb.reverse().toString()));
+        assertEquals(807, Integer.parseInt(result.toReverseString()));
     }
 }

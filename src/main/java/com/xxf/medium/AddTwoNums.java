@@ -1,4 +1,6 @@
-package com.xxf.easy;
+package com.xxf.medium;
+
+import com.xxf.ListNode;
 
 import java.math.BigInteger;
 import java.util.Stack;
@@ -18,7 +20,7 @@ import java.util.Stack;
  */
 class AddTwoNums {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         int carry = 0;
         ListNode p = l1;
@@ -44,7 +46,7 @@ class AddTwoNums {
         return dummy.next;
     }
 
-    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+    ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         BigInteger num1 = trans2Num(l1);
         BigInteger num2 = trans2Num(l2);
         BigInteger result = num1.add(num2);
@@ -71,14 +73,5 @@ class AddTwoNums {
             sb.append(stack.pop());
         }
         return new BigInteger(sb.toString());
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }
