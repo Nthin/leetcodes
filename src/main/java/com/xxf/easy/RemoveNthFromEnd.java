@@ -46,7 +46,19 @@ class RemoveNthFromEnd {
     }
 
     ListNode removeNthFromEnd2(ListNode head, int n) {
-        return null;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode first = dummy;
+        ListNode second = dummy;
+        for (int i = 0; i < n; i++) {
+            second = second.next;
+        }
+        while (second.next != null) {
+            first = first.next;
+            second = second.next;
+        }
+        first.next = first.next.next;
+        return dummy.next;
     }
 
 }

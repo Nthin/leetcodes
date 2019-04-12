@@ -24,13 +24,13 @@ public class RemoveNthFromEndTest {
 
     @Test
     public void removeNthFromEnd() {
-        ListNode result = removeNthFromEnd.removeNthFromEnd(node1, 4);
-        Assert.assertEquals("1345", result.toString());
+        ListNode result = removeNthFromEnd.removeNthFromEnd(node1, 2);
+        Assert.assertEquals("1235", result.toString());
     }
 
     @Test
     public void removeNthFromEnd2() {
-        ListNode result = removeNthFromEnd.removeNthFromEnd2(node1, 4);
-        Assert.assertEquals("1345", result.toString());
+        ListNode result = removeNthFromEnd.removeNthFromEnd2(node1, 2);
+        Assert.assertEquals("1235", result.toString());
     }
 }
