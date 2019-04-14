@@ -1,7 +1,7 @@
 package com.xxf.medium;
 
+import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -33,7 +33,7 @@ class LengthOfLongestSubstring {
             return 1;
         }
         int maxLength = 0;
-        Queue<Character> queue = new LinkedBlockingQueue<>();
+        Queue<Character> queue = new LinkedList<>();
         char[] chars = s.toCharArray();
         int left = chars.length;
         for (char c : chars) {
