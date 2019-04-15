@@ -14,6 +14,7 @@ public class IsPalindromeTest {
         assertTrue(isPalindrome.isPalindrome(121));
         assertFalse(isPalindrome.isPalindrome(10));
         assertFalse(isPalindrome.isPalindrome(-123));
+        assertFalse(isPalindrome.isPalindrome(200));
     }
 
     @Test
@@ -21,5 +22,6 @@ public class IsPalindromeTest {
         assertTrue(isPalindrome.isPalindrome(121));
         assertFalse(isPalindrome.isPalindrome(10));
         assertFalse(isPalindrome.isPalindrome(-123));
+        assertFalse(isPalindrome.isPalindrome(200));
     }
 }

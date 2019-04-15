@@ -30,13 +30,30 @@ class IsPalindrome {
         if (x < 10) {
             return true;
         }
+        if (x % 10 == 0) {
+            return false;
+        }
         String str = String.valueOf(x);
         StringBuilder sb = new StringBuilder(str);
         return sb.reverse().toString().equals(str);
     }
 
     boolean isPalindrome2(int x) {
-        return false;
+        if (x < 0) {
+            return false;
+        }
+        if (x < 10) {
+            return true;
+        }
+        if (x % 10 == 0) {
+            return false;
+        }
+        int newNum = 0;
+        while (newNum < x) {
+            newNum = newNum * 10 + x % 10;
+            x = x / 10;
+        }
+        return x == newNum || x == newNum / 10;
     }
 
 }
