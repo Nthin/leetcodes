@@ -1,4 +1,4 @@
-package com.xxf.easy;
+package com.xxf.medium;
 
 import com.xxf.ListNode;
 import org.junit.Assert;
