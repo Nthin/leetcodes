@@ -9,9 +9,7 @@ public class LongestCommonPrefixTest {
     private String[] strs1 = new String[]{"flower", "flow", "flight"};
     private String[] strs2 = new String[]{"dog","racecar","car"};
     private String[] strs3 = new String[]{"dog"};
-    private String[] strs4 = new String[]{"", "dog"};
-    private String[] strs5 = new String[3];
-    private String[] strs6 = new String[]{"c", "c"};
+    private String[] strs4 = new String[]{"c", "c"};
 
     @Test
     public void longestCommonPrefix() {
@@ -19,13 +17,21 @@ public class LongestCommonPrefixTest {
         String result2 = longestCommonPrefix.longestCommonPrefix(strs2);
         String result3 = longestCommonPrefix.longestCommonPrefix(strs3);
         String result4 = longestCommonPrefix.longestCommonPrefix(strs4);
-        String result5 = longestCommonPrefix.longestCommonPrefix(strs5);
-        String result6 = longestCommonPrefix.longestCommonPrefix(strs6);
         Assert.assertEquals("fl", result1);
         Assert.assertEquals("", result2);
         Assert.assertEquals("dog", result3);
-        Assert.assertEquals("", result4);
-        Assert.assertEquals("", result5);
-        Assert.assertEquals("c", result6);
+        Assert.assertEquals("c", result4);
+    }
+
+    @Test
+    public void longestCommonPrefix2() {
+        String result1 = longestCommonPrefix.longestCommonPrefix2(strs1);
+        String result2 = longestCommonPrefix.longestCommonPrefix2(strs2);
+        String result3 = longestCommonPrefix.longestCommonPrefix2(strs3);
+        String result4 = longestCommonPrefix.longestCommonPrefix2(strs4);
+        Assert.assertEquals("fl", result1);
+        Assert.assertEquals("", result2);
+        Assert.assertEquals("dog", result3);
+        Assert.assertEquals("c", result4);
     }
 }
