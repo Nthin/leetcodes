@@ -11,8 +11,15 @@ public class LongestPalindromeTest {
 
     @Test
     public void longestPalindrome() {
-        Assert.assertEquals("bab", longestPalindrome.longestPalindrome("babad"));
+        Assert.assertEquals("aba", longestPalindrome.longestPalindrome("babad"));
         Assert.assertEquals("bb", longestPalindrome.longestPalindrome("cbbd"));
         Assert.assertEquals("aba", longestPalindrome.longestPalindrome("abacdfgdcaba"));
+    }
+
+    @Test
+    public void longestPalindrome2() {
+        Assert.assertEquals("aba", longestPalindrome.longestPalindrome2("babad"));
+        Assert.assertEquals("bb", longestPalindrome.longestPalindrome2("cbbd"));
+        Assert.assertEquals("aba", longestPalindrome.longestPalindrome2("abacdfgdcaba"));
     }
 }
