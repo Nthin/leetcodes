@@ -1,0 +1,7 @@
+[General]
+name = custom-rules-xxf
+author = xxf
+description = Custom Rules.
+
+[Rule]
+DOMAIN-KEYWORD,bitwarden,DIRECT
